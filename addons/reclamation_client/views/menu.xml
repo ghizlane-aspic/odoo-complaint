@@ -3,6 +3,7 @@
 
     <menuitem id="reclamation_menu_root"
               name="Complaints"
+              action="reclamation_action_all"
               sequence="10"
               web_icon="reclamation_client,static/description/icon.png"/>
 
