@@ -1,0 +1,51 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# Odoo
+*.pyc
+/odoo-web-data/
+/odoo-db-data/
+*.log
+.odoo_dev_mode
+
+# Docker volumes (données locales)
+odoo-web-data/
+odoo-db-data/
+
+# Environment
+.env
+.env.local
+*.env
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Fichiers sensibles
+odoo.conf
+*.key
+*.pem
+
+# Node (si tu touches au JS un jour)
+node_modules/
+npm-debug.log
+
+# Backup
+*.sql
+*.dump
+*.bak
