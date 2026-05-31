@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="reclamation_action_report" model="ir.actions.report">
+        <field name="name">Customer Complaint</field>
+        <field name="model">reclamation.client</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">reclamation_client.reclamation_report_template</field>
+        <field name="report_file">reclamation_client.reclamation_report_template</field>
+        <field name="print_report_name">'Complaint - %s' % (object.name)</field>
+        <field name="binding_model_id" ref="model_reclamation_client"/>
+        <field name="binding_type">report</field>
+    </record>
+</odoo>

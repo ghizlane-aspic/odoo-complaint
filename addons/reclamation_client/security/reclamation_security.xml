@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+
+        <record id="reclamation_module_category" model="ir.module.category">
+            <field name="name">Customer Complaints</field>
+            <field name="description">Manage access to customer complaints.</field>
+            <field name="sequence">10</field>
+        </record>
+
+        <record id="reclamation_privilege" model="res.groups.privilege">
+            <field name="name">Customer Complaints</field>
+            <field name="sequence">10</field>
+            <field name="category_id" ref="reclamation_module_category"/>
+        </record>
+
+        <record id="reclamation_group_user" model="res.groups">
+            <field name="name">Complaint User</field>
+            <field name="sequence">10</field>
+            <field name="privilege_id" ref="reclamation_privilege"/>
+            <field name="comment">Can read, create and update customer complaints.</field>
+        </record>
+
+        <record id="reclamation_group_manager" model="res.groups">
+            <field name="name">Complaint Manager</field>
+            <field name="sequence">20</field>
+            <field name="privilege_id" ref="reclamation_privilege"/>
+            <field name="implied_ids" eval="[(4, ref('reclamation_group_user'))]"/>
+            <field name="comment">Full access to customer complaints, including deletion.</field>
+        </record>
+
+    </data>
+</odoo>
